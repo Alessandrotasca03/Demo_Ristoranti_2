@@ -1,0 +1,698 @@
+﻿<!doctype html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Appetito — Trattoria Italiana</title>
+<meta name="description" content="Appetito, trattoria italiana: cucina di tradizione, ingredienti freschi, catering su misura e un tavolo sempre pronto per te.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Vai al contenuto principale</a>
+
+<!-- Icon sprite -->
+<svg aria-hidden="true" style="display:none">
+  <symbol id="icon-utensils" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 2v7a1.6 1.6 0 0 0 3.2 0V2M8.6 9v13M16 2c-1.4 1-2.4 3-2.4 5.5S14.6 12 16 12M16 2v20"/></symbol>
+  <symbol id="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></symbol>
+  <symbol id="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></symbol>
+  <symbol id="icon-arrow-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="13 5 20 12 13 19"/></symbol>
+  <symbol id="icon-arrow-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="4" x2="12" y2="20"/><polyline points="5 13 12 20 19 13"/></symbol>
+  <symbol id="icon-chevron-left" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 6 9 12 15 18"/></symbol>
+  <symbol id="icon-chevron-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"/></symbol>
+  <symbol id="icon-calendar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><line x1="16" y1="3" x2="16" y2="7"/><line x1="8" y1="3" x2="8" y2="7"/><line x1="3" y1="10" x2="21" y2="10"/></symbol>
+  <symbol id="icon-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 16 14"/></symbol>
+  <symbol id="icon-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 3h3l1.5 5-2.5 2a13 13 0 0 0 6 6l2-2.5 5 1.5v3a2 2 0 0 1-2.2 2A17 17 0 0 1 4.5 5.2 2 2 0 0 1 6.5 3Z"/></symbol>
+  <symbol id="icon-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><polyline points="3 7 12 13 21 7"/></symbol>
+  <symbol id="icon-map-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12Z"/><circle cx="12" cy="9" r="2.5"/></symbol>
+  <symbol id="icon-star" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15 9 22 9.5 16.5 14 18.5 21 12 17 5.5 21 7.5 14 2 9.5 9 9"/></symbol>
+  <symbol id="icon-check-circle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><polyline points="8 12 11 15 16 9"/></symbol>
+  <symbol id="icon-alert-circle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><line x1="12" y1="8" x2="12" y2="12.5"/><circle cx="12" cy="16" r="0.6" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="icon-image" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="9.5" r="1.5"/><polyline points="21 16 15 10 6 20"/></symbol>
+  <symbol id="icon-leaf" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 21c9 0 14-5 14-14V5h-2C8 5 3 10 3 19v2Z"/><path d="M5 21c0-5 3-9 8-11"/></symbol>
+  <symbol id="icon-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.2"/><path d="M3.5 20c0-3.5 2.5-6 5.5-6s5.5 2.5 5.5 6"/><circle cx="17" cy="9" r="2.6"/><path d="M15.5 14c2.6.3 4.5 2.6 4.5 6"/></symbol>
+  <symbol id="icon-award" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="5.5"/><path d="M8.5 13.5 7 21l5-2.5L17 21l-1.5-7.5"/></symbol>
+  <symbol id="icon-heart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7-4.3-9.5-8.8C1 8 2.5 4.5 6 4c2-.3 3.7.7 6 3 2.3-2.3 4-3.3 6-3 3.5.5 5 4 3.5 7.2C19 15.7 12 20 12 20Z"/></symbol>
+  <symbol id="icon-facebook" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M14 21v-8h2.5l.4-3H14V8c0-.9.3-1.5 1.7-1.5H17V4c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.4-4 4v2.2H8v3h2.6V21Z"/></symbol>
+  <symbol id="icon-instagram" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.2" cy="6.8" r="0.9" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="icon-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></symbol>
+</svg>
+
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="brand" aria-label="Appetito — torna alla home">
+      <span class="brand-mark"><svg width="24" height="24" aria-hidden="true" focusable="false"><use href="#icon-utensils"></use></svg></span>
+      <span>Appetito</span>
+    </a>
+    <nav class="main-nav" aria-label="Navigazione principale">
+      <a href="menu.html">Menù</a>
+      <a href="chi-siamo.html">Scopri di noi</a>
+      <a href="galleria.html">Galleria</a>
+      <a href="#prenota">Catering</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="header-actions">
+      <a href="#prenota" class="btn btn-primary btn-sm">Contattaci</a>
+      <button class="nav-toggle" aria-label="Apri il menu di navigazione" aria-expanded="false" aria-controls="mobile-nav">
+        <svg aria-hidden="true" focusable="false"><use href="#icon-menu"></use></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-nav" id="mobile-nav">
+  <div class="mobile-nav-top">
+    <span class="brand" style="color:#fff">
+      <span class="brand-mark"><svg width="24" height="24" aria-hidden="true"><use href="#icon-utensils"></use></svg></span>
+      Appetito
+    </span>
+    <button class="btn-icon mobile-nav-close" aria-label="Chiudi il menu di navigazione" style="background:transparent;border-color:rgba(251,240,217,.3);color:#fff;">
+      <svg aria-hidden="true"><use href="#icon-close"></use></svg>
+    </button>
+  </div>
+  <ul>
+    <li><a href="menu.html">Menù</a></li>
+    <li><a href="chi-siamo.html">Scopri di noi</a></li>
+    <li><a href="galleria.html">Galleria</a></li>
+    <li><a href="#prenota">Catering</a></li>
+    <li><a href="#faq">FAQ</a></li>
+  </ul>
+  <a href="#prenota" class="btn btn-primary">Contattaci</a>
+</div>
+
+<main id="main">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-media">
+      <img src="images/hero-trattoria.jpg" alt="Sala della trattoria Appetito con tavoli a quadretti rossi, candele accese e forno a legna acceso sullo sfondo" width="1800" height="1806">
+    </div>
+    <div class="hero-scrim"></div>
+    <div class="hero-intro" aria-hidden="true">
+      <div class="hero-intro-stack">
+        <span class="hero-intro-plate"></span>
+        <span class="hero-intro-plate"></span>
+        <span class="hero-intro-plate"></span>
+        <span class="hero-intro-plate"></span>
+      </div>
+    </div>
+    <div class="container">
+      <div class="hero-content">
+        <span class="eyebrow">Trattoria Italiana</span>
+        <h1>Ogni sera, un'occasione da <em>festeggiare</em></h1>
+        <p class="hero-lede">Tra candele, calici di vino e i sapori della tradizione italiana: da Appetito ogni cena diventa un momento speciale.</p>
+        <div class="hero-actions">
+          <a href="menu.html" class="btn btn-primary">Scopri il Menù
+            <svg aria-hidden="true"><use href="#icon-arrow-right"></use></svg>
+          </a>
+          <a href="#prenota" class="btn btn-ghost-dark">Prenota un tavolo</a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll-cue">
+      <span>Scopri di più</span>
+      <svg aria-hidden="true"><use href="#icon-arrow-down"></use></svg>
+    </div>
+  </section>
+
+  <!-- MENU CTA — foto in trasparenza -->
+  <section class="menu-cta">
+    <div class="menu-cta-media">
+      <div class="ph on-dark">
+        <img src="images/dishes/pasta-pesto.jpg" alt="Pasta al pesto con pomodorini confit, un piatto della nostra cucina" loading="lazy">
+      </div>
+    </div>
+    <div class="menu-cta-scrim"></div>
+    <div class="container">
+      <div class="menu-cta-content">
+        <span class="eyebrow">La nostra cucina</span>
+        <h2>Ogni ricetta racconta una storia. Vieni a scoprirla.</h2>
+        <p>Ingredienti stagionali, tecniche tramandate di generazione in generazione e tanta cura in ogni dettaglio: scopri i piatti che raccontano chi siamo.</p>
+        <a href="menu.html" class="btn btn-primary">Vai al Menù completo
+          <svg aria-hidden="true"><use href="#icon-arrow-right"></use></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PIATTI SIGNATURE — scroll orizzontale -->
+  <section class="section" id="piatti" aria-labelledby="piatti-heading">
+    <div class="container">
+      <div class="section-head-row">
+        <div class="section-head" style="margin-bottom:0">
+          <span class="eyebrow">Specialità della casa</span>
+          <h2 id="piatti-heading" class="mt-0">I piatti che ci rappresentano</h2>
+        </div>
+      </div>
+
+      <div class="dish-scroller" data-scroller>
+        <button class="btn-icon dish-arrow dish-arrow--prev" data-scroller-prev aria-label="Mostra il piatto precedente">
+          <svg aria-hidden="true"><use href="#icon-chevron-left"></use></svg>
+        </button>
+        <button class="btn-icon dish-arrow dish-arrow--next" data-scroller-next aria-label="Mostra il piatto successivo">
+          <svg aria-hidden="true"><use href="#icon-chevron-right"></use></svg>
+        </button>
+
+      <ul class="scroller" data-scroller-track>
+
+        <li class="dish-card">
+          <div class="ph">
+            <img src="images/dishes/paccheri-pomodoro.jpg" alt="Pacchero alla Norma ripreso dall'alto" loading="lazy">
+          </div>
+          <div class="dish-card-body">
+            <span class="dish-card-tag">Primo</span>
+            <h3>Pacchero alla Norma</h3>
+            <p>Melanzana viola marinata, pomodoro San Marzano, ricotta salata e basilico fresco: un omaggio alla tradizione siciliana.</p>
+            <a class="dish-card-link" href="menu.html#dish-pacchero-norma">Vedi nel menù
+              <svg aria-hidden="true"><use href="#icon-arrow-right"></use></svg>
+            </a>
+          </div>
+        </li>
+
+        <li class="dish-card">
+          <div class="ph">
+            <img src="images/dishes/linguine-vongole.jpg" alt="Linguine allo Scoglio riprese dall'alto" loading="lazy">
+          </div>
+          <div class="dish-card-body">
+            <span class="dish-card-tag">Primo</span>
+            <h3>Linguine allo Scoglio</h3>
+            <p>Cozze, vongole veraci e gamberi freschi, un filo d'olio EVO e prezzemolo: la ricetta di famiglia che apriva ogni domenica.</p>
+            <a class="dish-card-link" href="menu.html#dish-linguine-scoglio">Vedi nel menù
+              <svg aria-hidden="true"><use href="#icon-arrow-right"></use></svg>
+            </a>
+          </div>
+        </li>
+
+        <li class="dish-card">
+          <div class="ph">
+            <img src="images/dishes/gnocchi-pomodorini.jpg" alt="Conchigliette al Pecorino riprese dall'alto" loading="lazy">
+          </div>
+          <div class="dish-card-body">
+            <span class="dish-card-tag">Primo freddo</span>
+            <h3>Conchigliette al Pecorino</h3>
+            <p>Pecorino di grotta, pomodorini confit e olive taggiasche: nata per i pranzi d'estate in giardino, oggi disponibile tutto l'anno.</p>
+            <a class="dish-card-link" href="menu.html#dish-conchigliette-pecorino">Vedi nel menù
+              <svg aria-hidden="true"><use href="#icon-arrow-right"></use></svg>
+            </a>
+          </div>
+        </li>
+
+        <li class="dish-card">
+          <div class="ph" role="img" aria-label="Foto placeholder ripresa dall'alto: Risotto allo zafferano">
+            <span class="ph-icon"><svg aria-hidden="true"><use href="#icon-image"></use></svg></span>
+            <span class="ph-label">Foto piatto — vista dall'alto</span>
+          </div>
+          <div class="dish-card-body">
+            <span class="dish-card-tag">Primo</span>
+            <h3>Risotto allo Zafferano</h3>
+            <p>Riso Carnaroli, zafferano in pistilli e Parmigiano 24 mesi: la ricetta milanese che il nostro chef ha imparato a Milano.</p>
+            <a class="dish-card-link" href="menu.html#dish-risotto-zafferano">Vedi nel menù
+              <svg aria-hidden="true"><use href="#icon-arrow-right"></use></svg>
+            </a>
+          </div>
+        </li>
+
+        <li class="dish-card">
+          <div class="ph">
+            <img src="images/gallery/tagliata-manzo.jpg" alt="Tagliata al Rosmarino a fette" loading="lazy">
+          </div>
+          <div class="dish-card-body">
+            <span class="dish-card-tag">Secondo</span>
+            <h3>Tagliata al Rosmarino</h3>
+            <p>Scottona italiana, rosmarino fresco e riduzione al vino rosso: semplice, per lasciare parlare la qualità della materia prima.</p>
+            <a class="dish-card-link" href="menu.html#dish-tagliata-manzo">Vedi nel menù
+              <svg aria-hidden="true"><use href="#icon-arrow-right"></use></svg>
+            </a>
+          </div>
+        </li>
+
+        <li class="dish-card">
+          <div class="ph">
+            <img src="images/dishes/tiramisu.jpg" alt="Tiramisù della Casa ripreso dall'alto" loading="lazy">
+          </div>
+          <div class="dish-card-body">
+            <span class="dish-card-tag">Dolce</span>
+            <h3>Tiramisù della Casa</h3>
+            <p>Mascarpone, savoiardi inzuppati al caffè e cacao amaro: la ricetta della nonna, servita esattamente come allora.</p>
+            <a class="dish-card-link" href="menu.html#dish-tiramisu">Vedi nel menù
+              <svg aria-hidden="true"><use href="#icon-arrow-right"></use></svg>
+            </a>
+          </div>
+        </li>
+
+      </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATERING -->
+  <section class="section section-dark catering" aria-labelledby="catering-heading">
+    <div class="container">
+      <div class="catering-collage">
+        <svg class="catering-deco" viewBox="0 0 100 100" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M20 90a70 70 0 0 1 70-70"/>
+          <path d="M32 90a58 58 0 0 1 58-58"/>
+          <path d="M44 90a46 46 0 0 1 46-46"/>
+        </svg>
+        <div class="ph ph--1 on-dark">
+          <img src="images/gallery/chef-impiattamento.jpg" alt="Chef che impiatta durante un evento di catering" loading="lazy">
+        </div>
+        <div class="ph ph--2 on-dark">
+          <img src="images/gallery/pasta-tavola.jpg" alt="Buffet di catering allestito con una selezione di piatti" loading="lazy">
+        </div>
+        <div class="ph ph--3 on-dark">
+          <img src="images/gallery/chef-dettaglio-piatto.jpg" alt="Dettaglio di un piatto impiattato per il catering" loading="lazy">
+        </div>
+      </div>
+      <div class="catering-text">
+        <span class="eyebrow">Eventi &amp; Catering</span>
+        <h2 id="catering-heading">Il catering di Appetito</h2>
+        <p>Portiamo la nostra cucina al tuo evento: matrimoni, feste aziendali o cene private. Menù su misura, materie prime selezionate e un servizio curato in ogni dettaglio.</p>
+        <ul class="catering-list">
+          <li>
+            <svg aria-hidden="true"><use href="#icon-check-circle"></use></svg>
+            <span>Menù personalizzato in base all'occasione e al numero di ospiti</span>
+          </li>
+          <li>
+            <svg aria-hidden="true"><use href="#icon-check-circle"></use></svg>
+            <span>Servizio in sala completo di staff e allestimento</span>
+          </li>
+          <li>
+            <svg aria-hidden="true"><use href="#icon-check-circle"></use></svg>
+            <span>Ingredienti freschi, gli stessi che usiamo ogni giorno in sala</span>
+          </li>
+        </ul>
+        <a href="#prenota" class="btn btn-primary">Scopri di più
+          <svg aria-hidden="true"><use href="#icon-arrow-right"></use></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRENOTAZIONE -->
+  <section class="section reserve" id="prenota" aria-labelledby="reserve-heading">
+    <div class="container">
+
+      <div class="reserve-info-card">
+        <span class="eyebrow">Prenota un tavolo</span>
+        <h2 id="reserve-heading">Ti aspettiamo da Appetito</h2>
+        <p style="color:var(--color-text-on-dark-muted)">Compila il modulo e ti confermeremo la prenotazione al più presto. Per gruppi superiori a 10 persone contattaci telefonicamente.</p>
+        <div class="info-list">
+          <div class="info-item">
+            <span class="icon-badge"><svg aria-hidden="true"><use href="#icon-map-pin"></use></svg></span>
+            <div>
+              <h4>Dove siamo</h4>
+              <p>Via Roma 12, 00100 Città</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <span class="icon-badge"><svg aria-hidden="true"><use href="#icon-clock"></use></svg></span>
+            <div>
+              <h4>Orari</h4>
+              <p>Tutti i giorni, 12:00–15:00 e 19:00–23:00</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <span class="icon-badge"><svg aria-hidden="true"><use href="#icon-phone"></use></svg></span>
+            <div>
+              <h4>Telefono</h4>
+              <p>+39 06 1234 5678</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <span class="icon-badge"><svg aria-hidden="true"><use href="#icon-mail"></use></svg></span>
+            <div>
+              <h4>Email</h4>
+              <p>info@appetito-demo.it</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="reserve-form-card">
+        <h3>Richiedi una prenotazione</h3>
+        <p class="field-hint" style="margin-bottom: var(--space-5)">Tutti i campi con * sono obbligatori.</p>
+        <form id="reserve-form" novalidate>
+          <div class="form-grid">
+            <div class="field">
+              <label for="r-nome">Nome e cognome <span class="required">*</span></label>
+              <input type="text" id="r-nome" name="nome" required data-error-message="Inserisci il tuo nome e cognome.">
+              <span class="field-error" role="alert"><svg aria-hidden="true"><use href="#icon-alert-circle"></use></svg><span>Inserisci il tuo nome e cognome.</span></span>
+            </div>
+            <div class="field">
+              <label for="r-telefono">Telefono <span class="required">*</span></label>
+              <input type="tel" id="r-telefono" name="telefono" autocomplete="tel" required data-error-message="Inserisci un numero di telefono.">
+              <span class="field-error" role="alert"><svg aria-hidden="true"><use href="#icon-alert-circle"></use></svg><span>Inserisci un numero di telefono.</span></span>
+            </div>
+            <div class="field span-2">
+              <label for="r-email">Email <span class="required">*</span></label>
+              <input type="email" id="r-email" name="email" autocomplete="email" required data-error-message="Inserisci un indirizzo email valido.">
+              <span class="field-error" role="alert"><svg aria-hidden="true"><use href="#icon-alert-circle"></use></svg><span>Inserisci un indirizzo email valido.</span></span>
+            </div>
+            <div class="field">
+              <label for="r-data">Data <span class="required">*</span></label>
+              <input type="date" id="r-data" name="data" required data-error-message="Seleziona una data.">
+              <span class="field-error" role="alert"><svg aria-hidden="true"><use href="#icon-alert-circle"></use></svg><span>Seleziona una data.</span></span>
+            </div>
+            <div class="field">
+              <label for="r-ora">Ora <span class="required">*</span></label>
+              <input type="time" id="r-ora" name="ora" required data-error-message="Seleziona un orario.">
+              <span class="field-error" role="alert"><svg aria-hidden="true"><use href="#icon-alert-circle"></use></svg><span>Seleziona un orario.</span></span>
+            </div>
+            <div class="field span-2">
+              <label for="r-persone">Numero di persone <span class="required">*</span></label>
+              <select id="r-persone" name="persone" required data-error-message="Seleziona il numero di persone.">
+                <option value="">Seleziona...</option>
+                <option>1 persona</option>
+                <option>2 persone</option>
+                <option>3 persone</option>
+                <option>4 persone</option>
+                <option>5 persone</option>
+                <option>6 persone</option>
+                <option>7+ persone (ti ricontattiamo noi)</option>
+              </select>
+              <span class="field-error" role="alert"><svg aria-hidden="true"><use href="#icon-alert-circle"></use></svg><span>Seleziona il numero di persone.</span></span>
+            </div>
+            <div class="field span-2">
+              <label for="r-note">Note aggiuntive</label>
+              <textarea id="r-note" name="note" placeholder="Allergie, intolleranze, occasioni speciali..."></textarea>
+              <span class="field-hint">Facoltativo</span>
+            </div>
+          </div>
+
+          <div class="form-submit-row">
+            <button type="submit" class="btn btn-primary">Invia richiesta di prenotazione</button>
+            <span class="form-feedback" role="status" aria-live="polite">
+              <svg aria-hidden="true"><use href="#icon-check-circle"></use></svg>
+              Richiesta inviata! Ti contatteremo a breve per confermare.
+            </span>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- MAPPA -->
+  <section class="section map-section" aria-labelledby="map-heading">
+    <div class="container">
+      <a class="map-frame" href="https://www.google.com/maps/search/?api=1&query=Via+Roma+12+Roma+Italia" target="_blank" rel="noopener" aria-label="Apri la posizione di Appetito in Google Maps">
+        <div class="map-static">
+          <span class="map-static-pin"><svg aria-hidden="true"><use href="#icon-map-pin"></use></svg></span>
+          <span class="map-static-label">Via Roma 12, 00100 Città</span>
+          <span class="map-static-cta">Apri in Google Maps
+            <svg aria-hidden="true" width="14" height="14"><use href="#icon-arrow-right"></use></svg>
+          </span>
+        </div>
+      </a>
+      <div class="map-text">
+        <span class="eyebrow">Dove siamo</span>
+        <h2 id="map-heading">Vieni a trovarci</h2>
+        <p>Siamo nel cuore della città, a due passi dalle principali fermate dei mezzi pubblici e con parcheggio pubblico nelle vicinanze.</p>
+        <ul class="map-info-list">
+          <li>
+            <svg aria-hidden="true"><use href="#icon-map-pin"></use></svg>
+            <span>Via Roma 12, 00100 Città</span>
+          </li>
+          <li>
+            <svg aria-hidden="true"><use href="#icon-clock"></use></svg>
+            <span>Tutti i giorni, 12:00–15:00 e 19:00–23:00</span>
+          </li>
+        </ul>
+        <a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&query=Via+Roma+12+Roma+Italia" target="_blank" rel="noopener">
+          Apri in Google Maps
+          <svg aria-hidden="true"><use href="#icon-arrow-right"></use></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATISTICHE -->
+  <section class="section" style="padding-bottom: 0" aria-label="Appetito in numeri">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-card">
+          <span class="stat-number">640+</span>
+          <span class="stat-label">Recensioni</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">4.9/5</span>
+          <span class="stat-label">Media recensioni</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">15+</span>
+          <span class="stat-label">Anni di esperienza</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RECENSIONI -->
+  <section class="section" aria-labelledby="reviews-heading">
+    <div class="container">
+      <div class="reviews-decor reviews-decor--left" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><use href="#icon-utensils"></use></svg>
+      </div>
+      <div class="reviews-decor reviews-decor--right" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><use href="#icon-utensils"></use></svg>
+      </div>
+      <div class="section-head center">
+        <span class="eyebrow">Cosa dicono di noi</span>
+        <h2 id="reviews-heading">Le parole dei nostri ospiti</h2>
+      </div>
+
+      <div class="review-deck">
+
+        <article class="review-card">
+          <div class="review-stars" aria-hidden="true">
+            <svg><use href="#icon-star"></use></svg><svg><use href="#icon-star"></use></svg><svg><use href="#icon-star"></use></svg><svg><use href="#icon-star"></use></svg><svg><use href="#icon-star"></use></svg>
+          </div>
+          <p class="review-quote">"Atmosfera calda e accogliente, pasta fatta in casa da urlo. Il pacchero alla Norma è da provare assolutamente."</p>
+          <div class="review-author">
+            <span class="review-avatar" aria-hidden="true">M</span>
+            <div><strong>Marco B.</strong><span>Cliente abituale</span></div>
+          </div>
+        </article>
+
+        <article class="review-card">
+          <div class="review-stars" aria-hidden="true">
+            <svg><use href="#icon-star"></use></svg><svg><use href="#icon-star"></use></svg><svg><use href="#icon-star"></use></svg><svg><use href="#icon-star"></use></svg><svg><use href="#icon-star"></use></svg>
+          </div>
+          <p class="review-quote">"Abbiamo usato il loro servizio di catering per il matrimonio: impeccabili dal primo contatto fino all'ultimo piatto servito."</p>
+          <div class="review-author">
+            <span class="review-avatar" aria-hidden="true">G</span>
+            <div><strong>Giulia F.</strong><span>Evento privato</span></div>
+          </div>
+        </article>
+
+        <article class="review-card">
+          <div class="review-stars" aria-hidden="true">
+            <svg><use href="#icon-star"></use></svg><svg><use href="#icon-star"></use></svg><svg><use href="#icon-star"></use></svg><svg><use href="#icon-star"></use></svg><svg><use href="#icon-star"></use></svg>
+          </div>
+          <p class="review-quote">"Personale gentilissimo e attento, prenotazione facile online. Torneremo sicuramente per provare tutto il menù."</p>
+          <div class="review-author">
+            <span class="review-avatar" aria-hidden="true">L</span>
+            <div><strong>Luca R.</strong><span>Cena di coppia</span></div>
+          </div>
+        </article>
+
+        <article class="review-card">
+          <div class="review-stars" aria-hidden="true">
+            <svg><use href="#icon-star"></use></svg><svg><use href="#icon-star"></use></svg><svg><use href="#icon-star"></use></svg><svg><use href="#icon-star"></use></svg><svg><use href="#icon-star"></use></svg>
+          </div>
+          <p class="review-quote">"Il tiramisù della casa è semplicemente perfetto. Location curata nei minimi dettagli, si respira la passione per la cucina."</p>
+          <div class="review-author">
+            <span class="review-avatar" aria-hidden="true">S</span>
+            <div><strong>Sara T.</strong><span>Cena di famiglia</span></div>
+          </div>
+        </article>
+
+        <article class="review-card">
+          <div class="review-stars" aria-hidden="true">
+            <svg><use href="#icon-star"></use></svg><svg><use href="#icon-star"></use></svg><svg><use href="#icon-star"></use></svg><svg><use href="#icon-star"></use></svg><svg><use href="#icon-star"></use></svg>
+          </div>
+          <p class="review-quote">"Ottimo rapporto qualità prezzo, ingredienti freschi e piatti curati. Consigliato per una cena tra amici."</p>
+          <div class="review-author">
+            <span class="review-avatar" aria-hidden="true">A</span>
+            <div><strong>Anna P.</strong><span>Cena tra amici</span></div>
+          </div>
+        </article>
+
+        <article class="review-card">
+          <div class="review-stars" aria-hidden="true">
+            <svg><use href="#icon-star"></use></svg><svg><use href="#icon-star"></use></svg><svg><use href="#icon-star"></use></svg><svg><use href="#icon-star"></use></svg><svg><use href="#icon-star"></use></svg>
+          </div>
+          <p class="review-quote">"Location bellissima, illuminata a candela: perfetta per un'occasione speciale. Il servizio non ha sbagliato un dettaglio."</p>
+          <div class="review-author">
+            <span class="review-avatar" aria-hidden="true">F</span>
+            <div><strong>Federica N.</strong><span>Anniversario</span></div>
+          </div>
+        </article>
+
+        <article class="review-card">
+          <div class="review-stars" aria-hidden="true">
+            <svg><use href="#icon-star"></use></svg><svg><use href="#icon-star"></use></svg><svg><use href="#icon-star"></use></svg><svg><use href="#icon-star"></use></svg><svg><use href="#icon-star"></use></svg>
+          </div>
+          <p class="review-quote">"Carta dei vini curatissima e abbinamenti perfetti suggeriti dal sommelier. Un'esperienza da ripetere."</p>
+          <div class="review-author">
+            <span class="review-avatar" aria-hidden="true">D</span>
+            <div><strong>Davide P.</strong><span>Cena di lavoro</span></div>
+          </div>
+        </article>
+
+      </div>
+      <p class="review-hint">
+        <svg aria-hidden="true"><use href="#icon-chevron-right"></use></svg>
+        <span>Clicca sulla card per scoprire la prossima recensione</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section faq" id="faq" aria-labelledby="faq-heading">
+    <div class="container">
+      <div class="section-head center">
+        <span class="eyebrow">Domande frequenti</span>
+        <h2 id="faq-heading">Tutto quello che vuoi sapere</h2>
+      </div>
+      <div class="faq-list">
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>Devo prenotare un tavolo in anticipo?</span>
+            <span class="faq-plus" aria-hidden="true"><svg><use href="#icon-plus"></use></svg></span>
+          </summary>
+          <div class="faq-answer">
+            <p>Consigliamo sempre di prenotare, soprattutto nel weekend e per le cene serali: ci aiuta a organizzare la sala e a garantirti il tavolo più adatto. Puoi farlo online tramite il modulo qui sopra o telefonicamente.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>Gestite allergie e intolleranze alimentari?</span>
+            <span class="faq-plus" aria-hidden="true"><svg><use href="#icon-plus"></use></svg></span>
+          </summary>
+          <div class="faq-answer">
+            <p>Sì. Segnalaci allergie o intolleranze nel campo note della prenotazione oppure direttamente al nostro staff in sala: molti piatti possono essere adattati e disponiamo di opzioni senza glutine e vegetariane.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>È previsto un parcheggio per i clienti?</span>
+            <span class="faq-plus" aria-hidden="true"><svg><use href="#icon-plus"></use></svg></span>
+          </summary>
+          <div class="faq-answer">
+            <p>Sì, nelle vicinanze della trattoria è disponibile un parcheggio pubblico a pochi minuti a piedi. Su richiesta possiamo indicarti anche le aree di sosta gratuite più vicine.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>Posso venire con il mio cane?</span>
+            <span class="faq-plus" aria-hidden="true"><svg><use href="#icon-plus"></use></svg></span>
+          </summary>
+          <div class="faq-answer">
+            <p>Gli amici a quattro zampe sono benvenuti nella nostra area esterna. In sala interna valutiamo caso per caso in base alla disponibilità: scrivicelo in fase di prenotazione.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>Quali metodi di pagamento accettate?</span>
+            <span class="faq-plus" aria-hidden="true"><svg><use href="#icon-plus"></use></svg></span>
+          </summary>
+          <div class="faq-answer">
+            <p>Accettiamo contanti, tutte le principali carte di credito e debito e i pagamenti contactless. Su richiesta possiamo dividere il conto tra più ospiti.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>Organizzate anche catering per eventi privati?</span>
+            <span class="faq-plus" aria-hidden="true"><svg><use href="#icon-plus"></use></svg></span>
+          </summary>
+          <div class="faq-answer">
+            <p>Sì, portiamo la cucina di Appetito a matrimoni, eventi aziendali e feste private con menù su misura. Trovi tutti i dettagli nella sezione Catering o puoi scriverci direttamente dal modulo di richiesta.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>Posso modificare o cancellare una prenotazione?</span>
+            <span class="faq-plus" aria-hidden="true"><svg><use href="#icon-plus"></use></svg></span>
+          </summary>
+          <div class="faq-answer">
+            <p>Certamente: contattaci telefonicamente o via email con il maggior anticipo possibile e provvederemo a modificare o liberare il tavolo, così da gestire al meglio la sala anche per gli altri ospiti.</p>
+          </div>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="brand">
+          <span class="brand-mark"><svg width="24" height="24" aria-hidden="true"><use href="#icon-utensils"></use></svg></span>
+          Appetito
+        </span>
+        <p>Cucina italiana di tradizione, ingredienti freschi e tanta passione, ogni giorno a tavola con te.</p>
+        <div class="footer-social">
+          <a href="#" class="btn-icon" aria-label="Appetito su Facebook" style="background:transparent;border-color:rgba(251,240,217,.2);color:#fff;">
+            <svg aria-hidden="true"><use href="#icon-facebook"></use></svg>
+          </a>
+          <a href="#" class="btn-icon" aria-label="Appetito su Instagram" style="background:transparent;border-color:rgba(251,240,217,.2);color:#fff;">
+            <svg aria-hidden="true"><use href="#icon-instagram"></use></svg>
+          </a>
+        </div>
+      </div>
+
+      <nav class="footer-col" aria-label="Link rapidi">
+        <h4>Naviga</h4>
+        <ul>
+          <li><a href="menu.html">Menù</a></li>
+          <li><a href="chi-siamo.html">Scopri di noi</a></li>
+          <li><a href="galleria.html">Galleria</a></li>
+          <li><a href="index.html#prenota">Prenota un tavolo</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-col">
+        <h4>Contatti</h4>
+        <ul>
+          <li class="info-row"><svg aria-hidden="true"><use href="#icon-map-pin"></use></svg><span>Via Roma 12, 00100 Città</span></li>
+          <li class="info-row"><svg aria-hidden="true"><use href="#icon-phone"></use></svg><span>+39 06 1234 5678</span></li>
+          <li class="info-row"><svg aria-hidden="true"><use href="#icon-mail"></use></svg><span>info@appetito-demo.it</span></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Resta aggiornato</h4>
+        <p style="margin:0 0 var(--space-2)">Novità dal menù e offerte speciali, direttamente nella tua inbox.</p>
+        <form class="newsletter-form" aria-label="Iscrizione alla newsletter" onsubmit="return false;">
+          <label for="newsletter-email" class="visually-hidden">Il tuo indirizzo email</label>
+          <input type="email" id="newsletter-email" placeholder="La tua email" autocomplete="email">
+          <button type="submit" class="btn-icon" aria-label="Iscriviti alla newsletter" style="background:var(--color-ochre-500);border-color:var(--color-ochre-500);color:var(--color-ink-900);">
+            <svg aria-hidden="true"><use href="#icon-arrow-right"></use></svg>
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© <span data-year>2026</span> Appetito. Tutti i diritti riservati.</span>
+      <span>Sito demo per trattoria — logo e contenuti generici a scopo dimostrativo.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

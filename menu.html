@@ -1,0 +1,505 @@
+﻿<!doctype html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Menù — Appetito</title>
+<meta name="description" content="Il menù di Appetito: antipasti, primi, secondi, dolci e bevande preparati con ingredienti freschi e ricette della tradizione italiana.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="page--interior">
+<a class="skip-link" href="#main">Vai al contenuto principale</a>
+
+<svg aria-hidden="true" style="display:none">
+  <symbol id="icon-utensils" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 2v7a1.6 1.6 0 0 0 3.2 0V2M8.6 9v13M16 2c-1.4 1-2.4 3-2.4 5.5S14.6 12 16 12M16 2v20"/></symbol>
+  <symbol id="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></symbol>
+  <symbol id="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></symbol>
+  <symbol id="icon-arrow-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="13 5 20 12 13 19"/></symbol>
+  <symbol id="icon-map-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12Z"/><circle cx="12" cy="9" r="2.5"/></symbol>
+  <symbol id="icon-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 3h3l1.5 5-2.5 2a13 13 0 0 0 6 6l2-2.5 5 1.5v3a2 2 0 0 1-2.2 2A17 17 0 0 1 4.5 5.2 2 2 0 0 1 6.5 3Z"/></symbol>
+  <symbol id="icon-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><polyline points="3 7 12 13 21 7"/></symbol>
+  <symbol id="icon-image" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="9.5" r="1.5"/><polyline points="21 16 15 10 6 20"/></symbol>
+  <symbol id="icon-facebook" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M14 21v-8h2.5l.4-3H14V8c0-.9.3-1.5 1.7-1.5H17V4c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.4-4 4v2.2H8v3h2.6V21Z"/></symbol>
+  <symbol id="icon-instagram" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.2" cy="6.8" r="0.9" fill="currentColor" stroke="none"/></symbol>
+</svg>
+
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="brand" aria-label="Appetito — torna alla home">
+      <span class="brand-mark"><svg width="24" height="24" aria-hidden="true"><use href="#icon-utensils"></use></svg></span>
+      <span>Appetito</span>
+    </a>
+    <nav class="main-nav" aria-label="Navigazione principale">
+      <a href="menu.html" aria-current="page">Menù</a>
+      <a href="chi-siamo.html">Scopri di noi</a>
+      <a href="galleria.html">Galleria</a>
+      <a href="index.html#prenota">Catering</a>
+      <a href="index.html#faq">FAQ</a>
+    </nav>
+    <div class="header-actions">
+      <a href="index.html#prenota" class="btn btn-primary btn-sm">Contattaci</a>
+      <button class="nav-toggle" aria-label="Apri il menu di navigazione" aria-expanded="false" aria-controls="mobile-nav">
+        <svg aria-hidden="true"><use href="#icon-menu"></use></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-nav" id="mobile-nav">
+  <div class="mobile-nav-top">
+    <span class="brand" style="color:#fff">
+      <span class="brand-mark"><svg width="24" height="24" aria-hidden="true"><use href="#icon-utensils"></use></svg></span>
+      Appetito
+    </span>
+    <button class="btn-icon mobile-nav-close" aria-label="Chiudi il menu di navigazione" style="background:transparent;border-color:rgba(251,240,217,.3);color:#fff;">
+      <svg aria-hidden="true"><use href="#icon-close"></use></svg>
+    </button>
+  </div>
+  <ul>
+    <li><a href="menu.html">Menù</a></li>
+    <li><a href="chi-siamo.html">Scopri di noi</a></li>
+    <li><a href="galleria.html">Galleria</a></li>
+    <li><a href="index.html#prenota">Catering</a></li>
+    <li><a href="index.html#faq">FAQ</a></li>
+  </ul>
+  <a href="index.html#prenota" class="btn btn-primary">Contattaci</a>
+</div>
+
+<main id="main">
+
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><span>Menù</span></div>
+      <span class="eyebrow" style="justify-content:center">Il nostro menù</span>
+      <h1>Sapori genuini, ogni giorno in tavola</h1>
+      <p>Una selezione di piatti preparati con ingredienti freschi e di stagione. Il menù può variare in base alla disponibilità del mercato.</p>
+    </div>
+  </section>
+
+  <section class="section on-light" style="padding-top: var(--space-6)">
+    <div class="container">
+
+      <div class="menu-tabs" role="tablist" aria-label="Categorie del menù">
+        <button class="menu-tab" role="tab" data-menu-tab="cat-antipasti" aria-selected="true">Antipasti</button>
+        <button class="menu-tab" role="tab" data-menu-tab="cat-primi" aria-selected="false">Primi</button>
+        <button class="menu-tab" role="tab" data-menu-tab="cat-secondi" aria-selected="false">Secondi</button>
+        <button class="menu-tab" role="tab" data-menu-tab="cat-dolci" aria-selected="false">Dolci</button>
+        <button class="menu-tab" role="tab" data-menu-tab="cat-bevande" aria-selected="false">Bevande</button>
+      </div>
+
+      <!-- ANTIPASTI -->
+      <div class="menu-category" id="cat-antipasti">
+        <div class="menu-category-title"><h2>Antipasti</h2></div>
+        <div class="menu-items">
+
+          <div class="menu-item">
+            <div class="ph" role="img" aria-label="Foto placeholder: tagliere di salumi e formaggi">
+              <span class="ph-icon"><svg aria-hidden="true"><use href="#icon-image"></use></svg></span>
+            </div>
+            <div class="menu-item-body">
+              <div class="menu-item-head"><h3>Tagliere Appetito</h3><span class="menu-item-price">€16</span></div>
+              <p>Selezione di salumi e formaggi locali, miele di castagno e composta di fichi.</p>
+              <div class="menu-item-tags"><span>Da condividere</span></div>
+            </div>
+          </div>
+
+          <div class="menu-item">
+            <div class="ph" role="img" aria-label="Foto placeholder: bruschette miste">
+              <span class="ph-icon"><svg aria-hidden="true"><use href="#icon-image"></use></svg></span>
+            </div>
+            <div class="menu-item-body">
+              <div class="menu-item-head"><h3>Bruschette della Casa</h3><span class="menu-item-price">€9</span></div>
+              <p>Pomodorino datterino, burrata pugliese e basilico su pane casereccio tostato.</p>
+              <div class="menu-item-tags"><span>Vegetariano</span></div>
+            </div>
+          </div>
+
+          <div class="menu-item">
+            <div class="ph" role="img" aria-label="Foto placeholder: polpo alla griglia">
+              <span class="ph-icon"><svg aria-hidden="true"><use href="#icon-image"></use></svg></span>
+            </div>
+            <div class="menu-item-body">
+              <div class="menu-item-head"><h3>Polpo alla Griglia</h3><span class="menu-item-price">€14</span></div>
+              <p>Polpo cotto a bassa temperatura, crema di patate viola e paprika affumicata.</p>
+            </div>
+          </div>
+
+          <div class="menu-item">
+            <div class="ph" role="img" aria-label="Foto placeholder: carpaccio di manzo">
+              <span class="ph-icon"><svg aria-hidden="true"><use href="#icon-image"></use></svg></span>
+            </div>
+            <div class="menu-item-body">
+              <div class="menu-item-head"><h3>Carpaccio di Manzo</h3><span class="menu-item-price">€13</span></div>
+              <p>Scaglie di Parmigiano 24 mesi, rucola selvatica e riduzione all'aceto balsamico.</p>
+            </div>
+          </div>
+
+          <div class="menu-item">
+            <div class="ph">
+              <img src="images/dishes/burrata-pomodorini.jpg" alt="Burrata pugliese con pomodorini confit e basilico" loading="lazy">
+            </div>
+            <div class="menu-item-body">
+              <div class="menu-item-head"><h3>Burrata e Pomodorini Confit</h3><span class="menu-item-price">€12</span></div>
+              <p>Burrata pugliese cremosa, pomodorini confit al forno e basilico fresco.</p>
+              <div class="menu-item-tags"><span>Vegetariano</span></div>
+            </div>
+          </div>
+
+          <div class="menu-item">
+            <div class="ph">
+              <img src="images/dishes/insalata-pomodoro.jpg" alt="Insalata di pomodori e misticanza" loading="lazy">
+            </div>
+            <div class="menu-item-body">
+              <div class="menu-item-head"><h3>Insalata di Pomodori e Misticanza</h3><span class="menu-item-price">€8</span></div>
+              <p>Pomodori di stagione, insalatina mista e un filo d'olio EVO a crudo.</p>
+              <div class="menu-item-tags"><span>Vegetariano</span></div>
+            </div>
+          </div>
+
+          <div class="menu-item">
+            <div class="ph">
+              <img src="images/dishes/insalata-mela-capra.jpg" alt="Insalata di spinaci, mela, formaggio di capra e noci pecan" loading="lazy">
+            </div>
+            <div class="menu-item-body">
+              <div class="menu-item-head"><h3>Spinaci, Mela e Caprino</h3><span class="menu-item-price">€11</span></div>
+              <p>Spinaci freschi, mela in lamelle, formaggio di capra, noci pecan e cipolla rossa in agrodolce.</p>
+              <div class="menu-item-tags"><span>Vegetariano</span></div>
+            </div>
+          </div>
+
+          <div class="menu-item">
+            <div class="ph">
+              <img src="images/dishes/insalata-caesar.jpg" alt="Insalata Caesar con pollo, crostini e scaglie di parmigiano" loading="lazy">
+            </div>
+            <div class="menu-item-body">
+              <div class="menu-item-head"><h3>Insalata Caesar con Pollo</h3><span class="menu-item-price">€13</span></div>
+              <p>Lattuga romana, petto di pollo grigliato, crostini di pane, pancetta croccante e scaglie di Parmigiano.</p>
+            </div>
+          </div>
+
+          <div class="menu-item">
+            <div class="ph">
+              <img src="images/gallery/gamberi-insalata.jpg" alt="Gamberi scottati su insalatina croccante" loading="lazy">
+            </div>
+            <div class="menu-item-body">
+              <div class="menu-item-head"><h3>Gamberi Scottati</h3><span class="menu-item-price">€15</span></div>
+              <p>Gamberi scottati in padella, insalatina croccante e granella di pane nero.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- PRIMI -->
+      <div class="menu-category" id="cat-primi">
+        <div class="menu-category-title"><h2>Primi Piatti</h2></div>
+        <div class="menu-items">
+
+          <div class="menu-item" id="dish-pacchero-norma">
+            <div class="ph">
+              <img src="images/dishes/paccheri-pomodoro.jpg" alt="Pacchero alla Norma con pomodoro, basilico e scaglie di formaggio" loading="lazy">
+            </div>
+            <div class="menu-item-body">
+              <div class="menu-item-head"><h3>Pacchero alla Norma</h3><span class="menu-item-price">€13</span></div>
+              <p>Melanzana viola marinata, pomodoro San Marzano, ricotta salata e basilico fresco: un omaggio alla tradizione siciliana.</p>
+              <div class="menu-item-tags"><span>Vegetariano</span></div>
+            </div>
+          </div>
+
+          <div class="menu-item" id="dish-linguine-scoglio">
+            <div class="ph">
+              <img src="images/dishes/linguine-vongole.jpg" alt="Linguine allo scoglio con vongole e cozze" loading="lazy">
+            </div>
+            <div class="menu-item-body">
+              <div class="menu-item-head"><h3>Linguine allo Scoglio</h3><span class="menu-item-price">€17</span></div>
+              <p>Cozze, vongole veraci e gamberi freschi, un filo d'olio EVO e prezzemolo: la ricetta di famiglia che apriva ogni domenica.</p>
+            </div>
+          </div>
+
+          <div class="menu-item" id="dish-conchigliette-pecorino">
+            <div class="ph">
+              <img src="images/dishes/gnocchi-pomodorini.jpg" alt="Conchigliette al pecorino con pomodorini e scaglie di formaggio" loading="lazy">
+            </div>
+            <div class="menu-item-body">
+              <div class="menu-item-head"><h3>Conchigliette al Pecorino</h3><span class="menu-item-price">€12</span></div>
+              <p>Pecorino di grotta, pomodorini confit e olive taggiasche: nata per i pranzi d'estate, oggi disponibile tutto l'anno.</p>
+              <div class="menu-item-tags"><span>Vegetariano</span></div>
+            </div>
+          </div>
+
+          <div class="menu-item" id="dish-risotto-zafferano">
+            <div class="ph" role="img" aria-label="Foto placeholder: Risotto allo zafferano">
+              <span class="ph-icon"><svg aria-hidden="true"><use href="#icon-image"></use></svg></span>
+            </div>
+            <div class="menu-item-body">
+              <div class="menu-item-head"><h3>Risotto allo Zafferano</h3><span class="menu-item-price">€14</span></div>
+              <p>Riso Carnaroli, zafferano in pistilli e Parmigiano 24 mesi: la ricetta milanese imparata dal nostro chef.</p>
+              <div class="menu-item-tags"><span>Vegetariano</span></div>
+            </div>
+          </div>
+
+          <div class="menu-item">
+            <div class="ph" role="img" aria-label="Foto placeholder: tagliatelle al ragù">
+              <span class="ph-icon"><svg aria-hidden="true"><use href="#icon-image"></use></svg></span>
+            </div>
+            <div class="menu-item-body">
+              <div class="menu-item-head"><h3>Tagliatelle al Ragù</h3><span class="menu-item-price">€13</span></div>
+              <p>Pasta fresca all'uovo tirata a mano e ragù di manzo cotto lentamente per oltre 6 ore.</p>
+            </div>
+          </div>
+
+          <div class="menu-item">
+            <div class="ph">
+              <img src="images/dishes/fusilli-pomodoro.jpg" alt="Fusilli integrali al pomodoro e rosmarino" loading="lazy">
+            </div>
+            <div class="menu-item-body">
+              <div class="menu-item-head"><h3>Fusilli Integrali al Pomodoro</h3><span class="menu-item-price">€12</span></div>
+              <p>Pasta integrale, salsa di pomodoro fresco, rosmarino e Parmigiano grattugiato.</p>
+              <div class="menu-item-tags"><span>Vegetariano</span></div>
+            </div>
+          </div>
+
+          <div class="menu-item">
+            <div class="ph">
+              <img src="images/dishes/rigatoni-guanciale.jpg" alt="Rigatoni al guanciale croccante e pecorino" loading="lazy">
+            </div>
+            <div class="menu-item-body">
+              <div class="menu-item-head"><h3>Rigatoni al Guanciale</h3><span class="menu-item-price">€14</span></div>
+              <p>Guanciale croccante, pecorino romano e una macinata di pepe nero.</p>
+            </div>
+          </div>
+
+          <div class="menu-item">
+            <div class="ph">
+              <img src="images/dishes/pasta-pesto.jpg" alt="Pasta al pesto con pomodorini confit e pinoli" loading="lazy">
+            </div>
+            <div class="menu-item-body">
+              <div class="menu-item-head"><h3>Trofie al Pesto</h3><span class="menu-item-price">€13</span></div>
+              <p>Pesto genovese fatto in casa, pomodorini confit e pinoli tostati.</p>
+              <div class="menu-item-tags"><span>Vegetariano</span></div>
+            </div>
+          </div>
+
+          <div class="menu-item">
+            <div class="ph">
+              <img src="images/dishes/ravioli-pomodoro.jpg" alt="Ravioli al pomodoro con cipolla rossa e basilico" loading="lazy">
+            </div>
+            <div class="menu-item-body">
+              <div class="menu-item-head"><h3>Ravioli al Pomodoro</h3><span class="menu-item-price">€15</span></div>
+              <p>Pasta ripiena fatta in casa, salsa di pomodoro, cipolla rossa e basilico fresco.</p>
+              <div class="menu-item-tags"><span>Vegetariano</span></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- SECONDI -->
+      <div class="menu-category" id="cat-secondi">
+        <div class="menu-category-title"><h2>Secondi Piatti</h2></div>
+        <div class="menu-items">
+
+          <div class="menu-item" id="dish-tagliata-manzo">
+            <div class="ph">
+              <img src="images/gallery/tagliata-manzo.jpg" alt="Tagliata al Rosmarino a fette" loading="lazy">
+            </div>
+            <div class="menu-item-body">
+              <div class="menu-item-head"><h3>Tagliata al Rosmarino</h3><span class="menu-item-price">€22</span></div>
+              <p>Scottona italiana, rosmarino fresco e riduzione al vino rosso: semplice, per lasciare parlare la materia prima.</p>
+            </div>
+          </div>
+
+          <div class="menu-item">
+            <div class="ph" role="img" aria-label="Foto placeholder: branzino al forno">
+              <span class="ph-icon"><svg aria-hidden="true"><use href="#icon-image"></use></svg></span>
+            </div>
+            <div class="menu-item-body">
+              <div class="menu-item-head"><h3>Branzino al Forno</h3><span class="menu-item-price">€19</span></div>
+              <p>Branzino intero, patate al rosmarino e pomodorini al forno con olive taggiasche.</p>
+            </div>
+          </div>
+
+          <div class="menu-item">
+            <div class="ph" role="img" aria-label="Foto placeholder: pollo alla cacciatora">
+              <span class="ph-icon"><svg aria-hidden="true"><use href="#icon-image"></use></svg></span>
+            </div>
+            <div class="menu-item-body">
+              <div class="menu-item-head"><h3>Pollo alla Cacciatora</h3><span class="menu-item-price">€15</span></div>
+              <p>Pollo ruspante cotto con olive, capperi e pomodoro: la ricetta contadina di sempre.</p>
+              <div class="menu-item-tags"><span class="tag-piccante">Piccante</span></div>
+            </div>
+          </div>
+
+          <div class="menu-item">
+            <div class="ph" role="img" aria-label="Foto placeholder: parmigiana di melanzane">
+              <span class="ph-icon"><svg aria-hidden="true"><use href="#icon-image"></use></svg></span>
+            </div>
+            <div class="menu-item-body">
+              <div class="menu-item-head"><h3>Parmigiana di Melanzane</h3><span class="menu-item-price">€12</span></div>
+              <p>Melanzane fritte, pomodoro, mozzarella e basilico, gratinate al forno.</p>
+              <div class="menu-item-tags"><span>Vegetariano</span></div>
+            </div>
+          </div>
+
+          <div class="menu-item">
+            <div class="ph">
+              <img src="images/gallery/filetto-vino.jpg" alt="Filetto di manzo con riduzione al vino rosso" loading="lazy">
+            </div>
+            <div class="menu-item-body">
+              <div class="menu-item-head"><h3>Filetto al Vino Rosso</h3><span class="menu-item-price">€26</span></div>
+              <p>Filetto di manzo scottato, aglio in camicia, rosmarino e riduzione al vino rosso.</p>
+            </div>
+          </div>
+
+          <div class="menu-item">
+            <div class="ph">
+              <img src="images/gallery/costolette-agnello.jpg" alt="Costolette di agnello alle erbe" loading="lazy">
+            </div>
+            <div class="menu-item-body">
+              <div class="menu-item-head"><h3>Costolette di Agnello alle Erbe</h3><span class="menu-item-price">€24</span></div>
+              <p>Costolette d'agnello rosolate, erbe fresche e contorno di verdure di stagione.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- DOLCI -->
+      <div class="menu-category" id="cat-dolci">
+        <div class="menu-category-title"><h2>Dolci</h2></div>
+        <div class="menu-items">
+
+          <div class="menu-item" id="dish-tiramisu">
+            <div class="ph">
+              <img src="images/dishes/tiramisu.jpg" alt="Tiramisù della casa con cacao amaro" loading="lazy">
+            </div>
+            <div class="menu-item-body">
+              <div class="menu-item-head"><h3>Tiramisù della Casa</h3><span class="menu-item-price">€7</span></div>
+              <p>Mascarpone, savoiardi inzuppati al caffè e cacao amaro: la ricetta della nonna, servita come allora.</p>
+              <div class="menu-item-tags"><span>Vegetariano</span></div>
+            </div>
+          </div>
+
+          <div class="menu-item">
+            <div class="ph" role="img" aria-label="Foto placeholder: panna cotta ai frutti di bosco">
+              <span class="ph-icon"><svg aria-hidden="true"><use href="#icon-image"></use></svg></span>
+            </div>
+            <div class="menu-item-body">
+              <div class="menu-item-head"><h3>Panna Cotta ai Frutti di Bosco</h3><span class="menu-item-price">€6</span></div>
+              <p>Panna cotta artigianale con coulis di frutti di bosco freschi di stagione.</p>
+            </div>
+          </div>
+
+          <div class="menu-item">
+            <div class="ph">
+              <img src="images/dishes/torta-piccola.jpg" alt="Tortina con zucchero a velo" loading="lazy">
+            </div>
+            <div class="menu-item-body">
+              <div class="menu-item-head"><h3>Tortina alla Vaniglia</h3><span class="menu-item-price">€6</span></div>
+              <p>Tortina soffice fatta in casa, spolverata di zucchero a velo.</p>
+              <div class="menu-item-tags"><span>Vegetariano</span></div>
+            </div>
+          </div>
+
+          <div class="menu-item">
+            <div class="ph">
+              <img src="images/dishes/macedonia.jpg" alt="Macedonia di frutta fresca con ribes rossi" loading="lazy">
+            </div>
+            <div class="menu-item-body">
+              <div class="menu-item-head"><h3>Macedonia di Frutta Fresca</h3><span class="menu-item-price">€5</span></div>
+              <p>Frutta di stagione tagliata fresca con ribes rossi e succo d'agrumi.</p>
+              <div class="menu-item-tags"><span>Vegetariano</span></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- BEVANDE -->
+      <div class="menu-category" id="cat-bevande">
+        <div class="menu-category-title"><h2>Bevande</h2></div>
+        <div class="menu-items">
+
+          <div class="menu-item">
+            <div class="ph" role="img" aria-label="Foto placeholder: calice di vino rosso">
+              <span class="ph-icon"><svg aria-hidden="true"><use href="#icon-image"></use></svg></span>
+            </div>
+            <div class="menu-item-body">
+              <div class="menu-item-head"><h3>Calice di Vino della Casa</h3><span class="menu-item-price">€5</span></div>
+              <p>Rosso, bianco o rosé: selezione di cantine locali, disponibile anche a bottiglia.</p>
+            </div>
+          </div>
+
+          <div class="menu-item">
+            <div class="ph" role="img" aria-label="Foto placeholder: acqua naturale o frizzante">
+              <span class="ph-icon"><svg aria-hidden="true"><use href="#icon-image"></use></svg></span>
+            </div>
+            <div class="menu-item-body">
+              <div class="menu-item-head"><h3>Acqua Naturale / Frizzante</h3><span class="menu-item-price">€2.50</span></div>
+              <p>Bottiglia da 0,75L.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <p class="menu-note">I prezzi sono indicativi e possono variare in base alla stagionalità degli ingredienti. Per allergie e intolleranze chiedi pure al nostro staff.</p>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="brand">
+          <span class="brand-mark"><svg width="24" height="24" aria-hidden="true"><use href="#icon-utensils"></use></svg></span>
+          Appetito
+        </span>
+        <p>Cucina italiana di tradizione, ingredienti freschi e tanta passione, ogni giorno a tavola con te.</p>
+        <div class="footer-social">
+          <a href="#" class="btn-icon" aria-label="Appetito su Facebook" style="background:transparent;border-color:rgba(251,240,217,.2);color:#fff;">
+            <svg aria-hidden="true"><use href="#icon-facebook"></use></svg>
+          </a>
+          <a href="#" class="btn-icon" aria-label="Appetito su Instagram" style="background:transparent;border-color:rgba(251,240,217,.2);color:#fff;">
+            <svg aria-hidden="true"><use href="#icon-instagram"></use></svg>
+          </a>
+        </div>
+      </div>
+      <nav class="footer-col" aria-label="Link rapidi">
+        <h4>Naviga</h4>
+        <ul>
+          <li><a href="menu.html">Menù</a></li>
+          <li><a href="chi-siamo.html">Scopri di noi</a></li>
+          <li><a href="galleria.html">Galleria</a></li>
+          <li><a href="index.html#prenota">Prenota un tavolo</a></li>
+        </ul>
+      </nav>
+      <div class="footer-col">
+        <h4>Contatti</h4>
+        <ul>
+          <li class="info-row"><svg aria-hidden="true"><use href="#icon-map-pin"></use></svg><span>Via Roma 12, 00100 Città</span></li>
+          <li class="info-row"><svg aria-hidden="true"><use href="#icon-phone"></use></svg><span>+39 06 1234 5678</span></li>
+          <li class="info-row"><svg aria-hidden="true"><use href="#icon-mail"></use></svg><span>info@appetito-demo.it</span></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Orari</h4>
+        <p style="margin:0">Tutti i giorni<br>12:00–15:00 · 19:00–23:00</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span data-year>2026</span> Appetito. Tutti i diritti riservati.</span>
+      <span>Sito demo per trattoria — logo e contenuti generici a scopo dimostrativo.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
